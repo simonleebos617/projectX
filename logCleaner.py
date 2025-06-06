@@ -6,6 +6,7 @@ from google.cloud import storage
 SOURCE_DIRECTORY = "/path/to/your/source_directory"  # !IMPORTANT: Change this to your actual source directory
 GCS_BUCKET_NAME = "example-bucket"                  # !IMPORTANT: Change this to your GCS bucket name
 DAYS_THRESHOLD = 7
+
 # Optional: Define a prefix for GCS, e.g., "archived_files/"
 # This will store files under gs://example-bucket/archived_files/
 GCS_DESTINATION_PREFIX = ""
