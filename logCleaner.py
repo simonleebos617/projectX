@@ -2,6 +2,7 @@ import os
 import datetime
 from google.cloud import storage
 
+# this is a test 
 # --- Configuration ---
 SOURCE_DIRECTORY = "/path/to/your/source_directory"  # !IMPORTANT: Change this to your actual source directory
 GCS_BUCKET_NAME = "example-bucket"                  # !IMPORTANT: Change this to your GCS bucket name
