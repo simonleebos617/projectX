@@ -13,6 +13,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Check if SONAR_TOKEN is set
+        run: |
+          if [ -z "$SONAR_TOKEN" ]; then
+            echo "SONAR_TOKEN is NOT set"
+            exit 1
+          else
+            echo "SONAR_TOKEN is set"
+          fi
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
